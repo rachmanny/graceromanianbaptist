@@ -84,55 +84,108 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const verses = {
+    // 2024
+	//    const verses = {
+	// 0: {
+    //     verseEN: "Matthew 16:24 - Then Jesus said to His disciples, 'If anyone desires to come after Me, let him deny himself, and take up his cross, and follow Me.' (NKJV)",
+    //     verseRO: "Matei 16:24 - Atunci Isus a zis ucenicilor Săi: „Dacă vrea cineva să vină după Mine, să se lepede de sine, să-și ia crucea și să Mă urmeze.” (Cornilescu)",
+    // },
+    // 1: {
+    //     verseEN: "John 8:31 - Then Jesus said to those Jews who believed Him, 'If you abide in My word, you are My disciples indeed.' (NKJV)",
+    //     verseRO: "Ioan 8:31 - Apoi Isus a zis iudeilor care crezuseră în El: „Dacă rămâneți în cuvântul Meu, sunteți cu adevărat ucenicii Mei.” (Cornilescu)",
+    // },
+    // 2: {
+    //     verseEN: "Luke 14:27 - And whoever does not bear his cross and come after Me cannot be My disciple. (NKJV)",
+    //     verseRO: "Luca 14:27 - Și oricine nu-și poartă crucea și nu vine după Mine nu poate fi ucenicul Meu. (Cornilescu)",
+    // },
+    // 3: {
+    //     verseEN: "John 13:35 - By this all will know that you are My disciples, if you have love for one another. (NKJV)",
+    //     verseRO: "Ioan 13:35 - Prin aceasta vor cunoaște toți că sunteți ucenicii Mei: dacă aveți dragoste unii pentru alții. (Cornilescu)",
+    // },
+    // 4: {
+    //     verseEN: "John 15:8 - By this My Father is glorified, that you bear much fruit; so you will be My disciples. (NKJV)",
+    //     verseRO: "Ioan 15:8 - Prin aceasta este slăvit Tatăl Meu: ca să aduceți multă roadă și să fiți ucenicii Mei. (Cornilescu)",
+    // },
+    // 5: {
+    //     verseEN: "Luke 14:33 - So likewise, whoever of you does not forsake all that he has cannot be My disciple. (NKJV)",
+    //     verseRO: "Luca 14:33 - Tot așa, oricine dintre voi, care nu renunță la tot ce are, nu poate fi ucenicul Meu. (Cornilescu)",
+    // },
+    // 6: {
+    //     verseEN: "1 Thessalonians 1:10 - And to wait for His Son from heaven, whom He raised from the dead, even Jesus who delivers us from the wrath to come. (NKJV)",
+    //     verseRO: "1 Tesaloniceni 1:10 - Și să așteptați pe Fiul Lui din ceruri, pe care Dumnezeu L-a înviat din morți, pe Isus, care ne izbăvește de mânia viitoare. (Cornilescu)",
+    // },
+    // 7: {
+    //     verseEN: "2 Corinthians 9:6 - But this I say: He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. (NKJV)",
+    //     verseRO: "2 Corinteni 9:6 - Dar aceasta spun: Cel ce seamănă cu zgârcenie, va secera și cu zgârcenie; și cel ce seamănă cu belșug, va secera și cu belșug. (Cornilescu)",
+    // },
+    // 8: {
+    //     verseEN: "Psalm 119:11 - Your word I have hidden in my heart, that I might not sin against You. (NKJV)",
+    //     verseRO: "Psalmul 119:11 - Îmi ascund cuvântul Tău în inima mea, ca să nu păcătuiesc împotriva Ta. (Cornilescu)",
+    // },
+    // 9: {
+    //     verseEN: "Psalm 119:18 - Open my eyes, that I may see wondrous things from Your law. (NKJV)",
+    //     verseRO: "Psalmul 119:18 - Deschide-mi ochii, ca să privesc minunile Legii Tale. (Cornilescu)",
+    // },
+    // 10: {
+    //     verseEN: "1 Corinthians 15:57 - But thanks be to God, who gives us the victory through our Lord Jesus Christ. (NKJV)",
+    //     verseRO: "1 Corinteni 15:57 - Dar mulțumiri fie aduse lui Dumnezeu, care ne dă biruința prin Domnul nostru Isus Cristos! (Cornilescu)",
+    // },
+    // 11: {
+    //     verseEN: "Luke 2:11 - For there is born to you this day in the city of David a Savior, who is Christ the Lord. (NKJV)",
+    //     verseRO: "Luca 2:11 - Căci vi s-a născut astăzi, în cetatea lui David, un Mântuitor, care este Hristos, Domnul. (Cornilescu)",
+    // },
+
+
+
+	const verses = {
     0: {
-        verseEN: "Matthew 16:24 - Then Jesus said to His disciples, 'If anyone desires to come after Me, let him deny himself, and take up his cross, and follow Me.' (NKJV)",
-        verseRO: "Matei 16:24 - Atunci Isus a zis ucenicilor Săi: „Dacă vrea cineva să vină după Mine, să se lepede de sine, să-și ia crucea și să Mă urmeze.” (Cornilescu)",
+        verseEN: "Mark 10:45 - For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many. (NKJV)",
+        verseRO: "Marcu 10:45 - Căci Fiul omului n-a venit să I se slujească ci El să slujească și să-Și dea viața răscumpărare pentru mulți. (Cornilescu)"
     },
     1: {
-        verseEN: "John 8:31 - Then Jesus said to those Jews who believed Him, 'If you abide in My word, you are My disciples indeed.' (NKJV)",
-        verseRO: "Ioan 8:31 - Apoi Isus a zis iudeilor care crezuseră în El: „Dacă rămâneți în cuvântul Meu, sunteți cu adevărat ucenicii Mei.” (Cornilescu)",
+        verseEN: "Psalm 100:2 - Serve the Lord with gladness; Come before His presence with singing. (NKJV)",
+        verseRO: "Psalm 100:2 - Slujiți Domnului cu bucurie, veniți cu veselie înaintea Lui. (Cornilescu)"
     },
     2: {
-        verseEN: "Luke 14:27 - And whoever does not bear his cross and come after Me cannot be My disciple. (NKJV)",
-        verseRO: "Luca 14:27 - Și oricine nu-și poartă crucea și nu vine după Mine nu poate fi ucenicul Meu. (Cornilescu)",
+        verseEN: "1 Corinthians 16:14 - Let all that you do be done with love. (NKJV)",
+        verseRO: "1 Corinteni 16:14 - Tot ce faceți, să fie făcut cu dragoste. (Cornilescu)"
     },
     3: {
-        verseEN: "John 13:35 - By this all will know that you are My disciples, if you have love for one another. (NKJV)",
-        verseRO: "Ioan 13:35 - Prin aceasta vor cunoaște toți că sunteți ucenicii Mei: dacă aveți dragoste unii pentru alții. (Cornilescu)",
+        verseEN: "John 13:34 - A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. (NKJV)",
+        verseRO: "Ioan 13:34 - Vă dau o poruncă nouă: Să vă iubiți unii pe alții; cum v-am iubit Eu, așa să vă iubiți și voi unii pe alții. (Cornilescu)"
     },
     4: {
-        verseEN: "John 15:8 - By this My Father is glorified, that you bear much fruit; so you will be My disciples. (NKJV)",
-        verseRO: "Ioan 15:8 - Prin aceasta este slăvit Tatăl Meu: ca să aduceți multă roadă și să fiți ucenicii Mei. (Cornilescu)",
+        verseEN: "Colossians 3:13 - Bearing with one another, and forgiving one another, if anyone has a complaint against another; even as Christ forgave you, so you also must do. (NKJV)",
+        verseRO: "Coloseni 3:13 - Îngăduiți-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul. Cum v-a iertat Hristos, așa iertați-vă și voi. (Cornilescu)"
     },
     5: {
-        verseEN: "Luke 14:33 - So likewise, whoever of you does not forsake all that he has cannot be My disciple. (NKJV)",
-        verseRO: "Luca 14:33 - Tot așa, oricine dintre voi, care nu renunță la tot ce are, nu poate fi ucenicul Meu. (Cornilescu)",
+        verseEN: "Romans 15:13 - Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope by the power of the Holy Spirit. (NKJV)",
+        verseRO: "Romani 15:13 - Dumnezeul nădejdii să vă umple de toată bucuria și pacea pe care o dă credința, pentru ca, prin puterea Duhului Sfânt, să fiți tari în nădejde. (Cornilescu)"
     },
     6: {
-        verseEN: "1 Thessalonians 1:10 - And to wait for His Son from heaven, whom He raised from the dead, even Jesus who delivers us from the wrath to come. (NKJV)",
-        verseRO: "1 Tesaloniceni 1:10 - Și să așteptați pe Fiul Lui din ceruri, pe care Dumnezeu L-a înviat din morți, pe Isus, care ne izbăvește de mânia viitoare. (Cornilescu)",
+        verseEN: "2 Timothy 4:7 - I have fought the good fight, I have finished the race, I have kept the faith. (NKJV)",
+        verseRO: "2 Timotei 4:7 - M-am luptat lupta cea bună, mi-am isprăvit alergarea, am păzit credința. (Cornilescu)"
     },
     7: {
-        verseEN: "2 Corinthians 9:6 - But this I say: He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. (NKJV)",
-        verseRO: "2 Corinteni 9:6 - Dar aceasta spun: Cel ce seamănă cu zgârcenie, va secera și cu zgârcenie; și cel ce seamănă cu belșug, va secera și cu belșug. (Cornilescu)",
+        verseEN: "Philippians 4:6 - Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God. (NKJV)",
+        verseRO: "Filipeni 4:6 - Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri. (Cornilescu)"
     },
     8: {
-        verseEN: "Psalm 119:11 - Your word I have hidden in my heart, that I might not sin against You. (NKJV)",
-        verseRO: "Psalmul 119:11 - Îmi ascund cuvântul Tău în inima mea, ca să nu păcătuiesc împotriva Ta. (Cornilescu)",
+        verseEN: "Matthew 6:33 - But seek first the kingdom of God and His righteousness, and all these things shall be added to you. (NKJV)",
+        verseRO: "Matei 6:33 - Căutați mai întâi Împărăția lui Dumnezeu și neprihănirea Lui, și toate aceste lucruri vi se vor da pe deasupra. (Cornilescu)"
     },
     9: {
-        verseEN: "Psalm 119:18 - Open my eyes, that I may see wondrous things from Your law. (NKJV)",
-        verseRO: "Psalmul 119:18 - Deschide-mi ochii, ca să privesc minunile Legii Tale. (Cornilescu)",
+        verseEN: "1 Thessalonians 5:17 - Pray without ceasing. (NKJV)",
+        verseRO: "1 Tesaloniceni 5:17 - Rugați-vă neîncetat. (Cornilescu)"
     },
     10: {
-        verseEN: "1 Corinthians 15:57 - But thanks be to God, who gives us the victory through our Lord Jesus Christ. (NKJV)",
-        verseRO: "1 Corinteni 15:57 - Dar mulțumiri fie aduse lui Dumnezeu, care ne dă biruința prin Domnul nostru Isus Cristos! (Cornilescu)",
+        verseEN: "1 Thessalonians 5:18 - In everything give thanks; for this is the will of God in Christ Jesus for you. (NKJV)",
+        verseRO: "1 Tesaloniceni 5:18 - Mulțumiți lui Dumnezeu pentru toate lucrurile, căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi. (Cornilescu)"
     },
     11: {
         verseEN: "Luke 2:11 - For there is born to you this day in the city of David a Savior, who is Christ the Lord. (NKJV)",
-        verseRO: "Luca 2:11 - Căci vi s-a născut astăzi, în cetatea lui David, un Mântuitor, care este Hristos, Domnul. (Cornilescu)",
-    },
+        verseRO: "Luca 2:11 - Astăzi, în cetatea lui David, vi s-a născut un Mântuitor, care este Hristos, Domnul. (Cornilescu)"
+    }
 };
 
         const currentMonth = new Date().getMonth();
