@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1"
+    />
+
+    <title>Harul</title>
+
+    <!-- Loading third party fonts -->
+    <link
+      href="fonts/novecento-font/novecento-font.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="fonts/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Modern Google fonts for nicer typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--[if lt IE 9]>
+      <script src="js/ie-support/html5.js"></script>
+      <script src="js/ie-support/respond.js"></script>
+    <![endif]-->
+
+	<style>
+    /* Make buttons center nicely and look consistent */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    /* Slide layout tweaks */
+    .slide-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .slide-actions {
+      margin-top: 0.75rem;
+    }
+
+    .slide-title {
+      max-width: 100%;
+      word-wrap: break-word;
+      line-height: 1.25;
+    }
+
+    /* Simple “card” feel for sections */
+    .fullwidth-block .container {
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      padding: 2rem 1.5rem;
+      background: #fbfbfb;
+    }
+
+    /* Plan your visit subtle separation */
+    #visit {
+      border-left: 1px solid rgba(0, 0, 0, 0.06);
+      padding-left: 2rem;
+    }
+
+    /* Event list as softer cards */
+    .event-list li a {
+      display: block;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-list li a:hover {
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    /* Sermon list clean spacing */
+    .seremon-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .seremon-list li {
+      list-style: none;
+      margin-bottom: 0.9rem;
+    }
+
+    /* MOBILE FIXES */
+    @media (max-width: 768px) {
+      .slide-card {
+        align-items: center;
+        text-align: center;
+        margin: 2.5rem auto;
+        padding: 1.1rem 1.3rem;
+      }
+
+      .slide-title {
+        font-size: 1.5rem;
+      }
+
+      .slide-text {
+        font-size: 0.9rem;
+      }
+
+      .slide-actions .button {
+        width: 100%;
+      }
+
+      #visit {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .fullwidth-block .container {
+        padding: 1.4rem 1rem;
+        border-radius: 12px;
+      }
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <div class="site-content">
+      <header class="site-header">
+        <div class="container">
+          <a href="index.html" class="branding">
+            <!-- Existing logo -->
+            <img
+              src="images/grbc_logo.PNG"
+              width="150"
+              height="150"
+              alt="Grace Romanian Baptist Church Logo"
+              class="logo"
+            />
+            <h1 class="site-title">
+              Grace Romanian Baptist Church
+              <span class="site-tagline"></span>
+            </h1>
+          </a>
+
+          <div class="main-navigation">
+            <button class="menu-toggle">
+              <i class="fa fa-bars"></i> Menu
+            </button>
+            <ul class="menu">
+              <li class="menu-item current-menu-item"><a href="index.html">Home<small>Start here</small></a></li>
+              <li class="menu-item"><a href="music-conference.html">Conference<small>Music & Worship</small></a></li>
+
+              <!-- <li class="menu-item">
+                <a href="events.html">
+                  Events
+                  <small>What’s happening</small>
+                </a>
+              </li> -->
+              <!-- <li class="menu-item">
+                <a href="contact.html">
+                  Contact
+                  <small>We’d love to meet you</small>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+
+          <div class="mobile-navigation"></div>
+        </div>
+      </header>
+      <!-- .site-header -->
+
+      <div class="hero">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* --- General Resets --- */
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #ffffff; /* White page background requested */
+}
+
+/* --- Slideshow Container (Full Width) --- */
+.slideshow-container {
+  width: 100%;
+  height: 90vh; /* 90% of screen height */
+  position: relative;
+  overflow: hidden;
+  background-color: #000; /* Keeps the container black behind images */
+}
+
+/* --- Slide Wrapper --- */
+.mySlides {
+  display: none; /* Hidden by default */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* --- Background Image Styling --- */
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* --- Dark Overlay (Makes text POP) --- */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Darker gradient to ensure text pops */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)); 
+  z-index: 2;
+}
+
+/* --- Centered Content Container --- */
+.slide-content-wrapper {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- The Text Card Styling --- */
+.slide-card {
+  max-width: 900px;
+  color: #fff;
+  animation: slideUp 1s ease-out;
+  /* Text Shadow makes text pop out from background */
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.slide-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #f0f0f0;
+  display: block;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.slide-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+
+.slide-title-secondary {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.slide-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #fff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Box for Times/Dates to make them distinct */
+.info-box {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black box */
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: inline-block;
+  text-align: left;
+  min-width: 300px;
+  backdrop-filter: blur(5px); /* Blurs background behind box for modern look */
+}
+
+.info-box strong {
+  color: #ffaa00; /* Gold color for labels */
+}
+
+/* --- Action Button --- */
+.button {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.button:hover {
+  background-color: #f44336; 
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* --- Navigation Arrows --- */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.3); /* Subtle background for visibility */
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev { left: 0; border-radius: 0 3px 3px 0; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* --- Dots --- */
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #fff;
+  transform: scale(1.3);
+}
+
+/* --- Animations --- */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;} 
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* --- Mobile Adjustments --- */
+@media only screen and (max-width: 768px) {
+  .slide-title { font-size: 2rem; }
+  .slide-title-secondary { font-size: 1.2rem; }
+  .info-box { width: 90%; }
+  .slideshow-container { height: 100vh; } 
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="images/church1.jpg" class="slide-img" alt="Church Building">
+    <div class="overlay"></div> 
+    
+    <div class="slide-content-wrapper">
+      <div class="slide-card">
+        <!-- <small class="slide-subtitle">Welcome to Harul</small> -->
+        <h2 class="slide-title">Join us for worship this week</h2>
+        
+        <p class="slide-text">
+          We are a Romanian–English speaking church that loves Jesus,
+          His Word, and His people. Join us to worship God together.
+        </p>
+
+        <div class="info-box">
+           <strong>Service Times</strong><br>
+           Sundays • 10:00 AM – Morning Worship<br>
+           Sundays • 6:00 PM – Afternoon Worship<br>
+           Fridays • 7:00 PM – Bible Study & Prayer
+        </div>
+        
+        <br>
+        <div class="slide-actions">
+          <a href="#stream" class="button">Watch Live / Livestream</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/church4.jpg" class="slide-img" alt="Christmas Concert">
+    <div class="overlay"></div>
+    
+    <div class="slide-content-wrapper">
+      <div class="slide-card">
+        <h2 class="slide-title">Christmas Concert</h2>
+        <span class="slide-title-secondary">Concert de Crăciun</span>
+        
+        <p class="slide-text">
+          An evening of worship, choir music, Scripture readings, and celebration of the birth of Christ. Everyone is welcome!
+        </p>
+        
+        <div class="info-box">
+          <strong>Date:</strong> December 21, 2025 at 5:00 PM<br>
+          <strong>Location:</strong> New Life Baptist Church
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/church3.png" class="slide-img" alt="Worship Conference">
+    <div class="overlay"></div>
+    
+    <div class="slide-content-wrapper">
+      <div class="slide-card">
+        <h2 class="slide-title">Grace Worship Conference</h2>
+        <span class="slide-title-secondary">Conferință de Muzică & Închinare</span>
+        
+        <p class="slide-text">
+          A weekend of teaching, worship, and fellowship for choirs, worship teams, and anyone who wants to grow in biblical worship and music ministry.
+        </p>
+        
+        <div class="info-box">
+          <strong>Date:</strong> January 23–24, 2025<br>
+          <strong>Location:</strong> Grace Romanian Baptist Church
+        </div>
+
+        <div class="slide-actions">
+           <a href="music-conference.html" class="button">More Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+</div>
+
+
+
+<script>
+let slideIndex = 1;
+let slideTimer;
+
+showSlides(slideIndex);
+
+// Manual Next/Prev controls
+function plusSlides(n) {
+  clearTimeout(slideTimer); // Reset timer to prevent double jumping
+  showSlides(slideIndex += n);
+}
+
+// Manual Dot controls
+function currentSlide(n) {
+  clearTimeout(slideTimer); // Reset timer
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  
+  // Logic to loop continuously without going "black"
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  
+  // Hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  // Deactivate all dots
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  // Show the correct slide
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  
+  // Set up the next auto-slide
+  slideTimer = setTimeout(function() {
+      showSlides(slideIndex += 1); 
+  }, 6000); // Change slide every 6 seconds
+}
+</script>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+      <main class="main-content">
+
+
+          <!-- Livestream -->
+        <div class="fullwidth-block" id="stream">
+          <div class="container">
+            <h2 class="section-title">Livestream</h2>
+            <p>
+              Join us online if you cannot attend in person. Our main services
+              are streamed live.
+            </p>
+
+            <iframe
+              src="https://stream.streamingchurch.tv/stream.php?churchid=church9993"
+              width="100%"
+              height="500"
+              style="border:0;"
+              allowfullscreen
+            ></iframe>
+
+            <p><em>If the livestream is offline, please check back during service times.</em></p>
+          </div>
+        </div>
+
+
+
+
+<section id="verse-of-the-month" class="verseSection">
+					<div id="main" >
+						<div class="container">
+							<header class="major">
+								<h2>Verse of the Month</h2>
+								<br>
+								<p id="monthly-verse-en"></p>
+								<p id="monthly-verse-ro"></p>
+							</header>
+						</div>
+					</div>
+				</section>
+
+
+
+        <section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      
+      <div class="intro-content">
+        <h2 class="section-title">A church family centered on Christ</h2>
+        <p class="lead-text">
+          At Grace Romanian Baptist Church, we gather to worship God, preach the Gospel, and grow together as a multi-generational, Romanian and English-speaking community.
+        </p>
+        <p>Our desire is to glorify God by:</p>
+        
+        <ul class="feature-list">
+          <li>
+            <i class="fa fa-check-circle accent-icon"></i>
+            <span>Proclaiming the Gospel of Jesus Christ</span>
+          </li>
+          <li>
+            <i class="fa fa-check-circle accent-icon"></i>
+            <span>Teaching and living out the Bible</span>
+          </li>
+          <li>
+            <i class="fa fa-check-circle accent-icon"></i>
+            <span>Equipping families, youth, and children</span>
+          </li>
+          <li>
+            <i class="fa fa-check-circle accent-icon"></i>
+            <span>Serving one another in love</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="intro-visit-card" id="visit">
+        <div class="card-inner">
+          <h2 class="section-title card-title">Plan your visit</h2>
+          <p>
+            Visiting for the first time? We’d love to welcome you, help you find parking, and show you around.
+          </p>
+          
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <div class="icon-box"><i class="fa fa-calendar"></i></div>
+              <div class="schedule-details">
+                <strong>Sunday Services</strong>
+                <span>10:00 AM & 6:00 PM</span>
+              </div>
+            </div>
+            
+            <div class="schedule-item">
+              <div class="icon-box"><i class="fa fa-book"></i></div>
+              <div class="schedule-details">
+                <strong>Friday Bible Study and Prayer</strong>
+                <span>7:00 PM</span>
+              </div>
+            </div>
+
+            <div class="schedule-item highlight-item">
+              <div class="icon-box"><i class="fa fa-headphones"></i></div>
+              <div class="schedule-details">
+                <strong>Bilingual Service</strong>
+                <span>English translation available</span>
+              </div>
+            </div>
+          </div>
+
+          <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=1542+Harrison+St,+Hollywood,+FL+33020" 
+            class="visit-btn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Get Directions <i class="fa fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* --- Layout & Spacing --- */
+.intro-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.intro-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px; /* Space between columns */
+  align-items: center; /* Vertically centers the content */
+}
+
+.intro-content {
+  flex: 1 1 500px; /* Takes up available space but wraps if small */
+}
+
+.intro-visit-card {
+  flex: 1 1 350px;
+}
+
+/* --- Typography --- */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #333;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* --- Feature List (Left Side) --- */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.accent-icon {
+  color: #2E86DE; /* Change to your brand color */
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* --- Visit Card (Right Side) --- */
+.intro-visit-card {
+  background-color: #f8f9fa; /* Light grey background */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow for depth */
+  overflow: hidden;
+}
+
+.card-inner {
+  padding: 40px;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  margin-top: 0;
+}
+
+/* --- Schedule List --- */
+.schedule-list {
+  margin: 30px 0;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-right: 15px;
+  color: #333;
+}
+
+.schedule-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-details strong {
+  color: #333;
+  font-size: 1rem;
+}
+
+.schedule-details span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Highlight the translation feature */
+.highlight-item .icon-box {
+  background-color: #e3f2fd;
+  color: #2E86DE;
+}
+
+/* --- Button --- */
+.visit-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #2E86DE; /* Brand Color */
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.visit-btn:hover {
+  background-color: #1c6cb8; /* Darker shade for hover */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- Mobile Specific Tweaks --- */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 50px 0;
+  }
+  
+  .intro-grid {
+    gap: 40px;
+    flex-direction: column; /* Stack them vertically */
+  }
+  
+  .card-inner {
+    padding: 30px 20px; /* Less padding on small screens */
+  }
+}
+</style>
+
+      
+
+        <div class="fullwidth-block">
+          <div class="container">
+            <!-- <div class="row"> -->
+
+
+              <!-- Upcoming events -->
+              <div class="events-container">
+    <h2 class="section-title">Upcoming Events</h2>
+    
+    <ul class="new-event-list">
+        
+        <li class="event-card recurring">
+            <a href="#">
+                <div class="event-date-box">
+                    <span class="day">Every</span>
+                    <span class="month">Sunday</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Sunday Worship Gathering</h3>
+                    <div class="event-meta-group">
+                        <span class="event-time">
+                            <i class="fa fa-clock-o"></i> 10:00 AM & 6:00 PM
+                        </span>
+                        <span class="event-location">
+                            <i class="fa fa-home"></i> 1542 Harrison St, Hollywood, FL
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        
+        <li class="event-card recurring">
+            <a href="#">
+                <div class="event-date-box">
+                    <span class="day">Every</span>
+                    <span class="month">Friday</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Prayer & Worship Night 🙏</h3>
+                    <div class="event-meta-group">
+                        <span class="event-time">
+                            <i class="fa fa-clock-o"></i> 7:00 PM
+                        </span>
+                        <span class="event-location">
+                            <i class="fa fa-map-marker"></i> 1542 Harrison St, Hollywood, FL
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        
+
+        
+        
+        
+        
+        <li class="event-card offsite">
+            <a href="#">
+                <div class="event-date-box">
+                    <span class="day">21</span>
+                    <span class="month">Dec</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Christmas Concert 🎄</h3>
+                    <div class="event-meta-group">
+                        <span class="event-time">
+                            <i class="fa fa-calendar"></i> Dec 21, 2025
+                        </span>
+                        <span class="event-location">
+                            <i class="fa fa-location-arrow"></i> New Life Romanian Church
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="event-card special">
+            <a href="#">
+                <div class="event-date-box">
+                    <span class="day">23-24</span>
+                    <span class="month">Jan</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Grace Worship & Music Conference 🎵</h3>
+                    <div class="event-meta-group">
+                        <span class="event-time">
+                            <i class="fa fa-calendar"></i> Jan 23–24, 2025
+                        </span>
+                        <span class="event-location">
+                            <i class="fa fa-map-marker"></i> 1542 Harrison St, Hollywood, FL
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="event-card future">
+            <a href="#">
+                <div class="event-date-box">
+                    <span class="day">Date</span>
+                    <span class="month">TBD</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Grace Adventures (VBS) 🏖️</h3>
+                    <div class="event-meta-group">
+                        <span class="event-time">
+                            <i class="fa fa-calendar"></i> Summer Program
+                        </span>
+                        <span class="event-location">
+                            <i class="fa fa-map-marker"></i> 1542 Harrison St, Hollywood, FL
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <!-- <div class="events-cta-wrap">
+        <a href="events.html" class="all-events-btn">
+            See All Events <i class="fa fa-chevron-right"></i>
+        </a>
+    </div> -->
+<!-- </div> -->
+
+
+
+
+
+              <!-- Latest sermons -->
+              <!-- <div class="col-md-6">
+                <h2 class="section-title">Latest sermons</h2>
+                <ul class="seremon-list">
+                  <li>
+                    <div class="sermon-card">
+                      <img
+                        src="images/sermon-1-placeholder.jpg"
+                        alt="Sermon illustration placeholder"
+                      />
+                      <div class="seremon-detail">
+                        <h3 class="seremon-title">
+                          <a href="#">
+                            The Grace of God in Everyday Life
+                          </a>
+                        </h3>
+                        <div class="seremon-meta">
+                          <div class="pastor">
+                            <i class="fa fa-user"></i> Pastor Name
+                          </div>
+                          <div class="date">
+                            <i class="fa fa-calendar"></i> Nov 10, 2025
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sermon-card">
+                      <img
+                        src="images/sermon-2-placeholder.jpg"
+                        alt="Sermon illustration placeholder"
+                      />
+                      <div class="seremon-detail">
+                        <h3 class="seremon-title">
+                          <a href="#">
+                            Walking by Faith, Not by Sight
+                          </a>
+                        </h3>
+                        <div class="seremon-meta">
+                          <div class="pastor">
+                            <i class="fa fa-user"></i> Pastor Name
+                          </div>
+                          <div class="date">
+                            <i class="fa fa-calendar"></i> Nov 3, 2025
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sermon-card">
+                      <img
+                        src="images/sermon-3-placeholder.jpg"
+                        alt="Sermon illustration placeholder"
+                      />
+                      <div class="seremon-detail">
+                        <h3 class="seremon-title">
+                          <a href="#">
+                            Christ at the Center of the Family
+                          </a>
+                        </h3>
+                        <div class="seremon-meta">
+                          <div class="pastor">
+                            <i class="fa fa-user"></i> Pastor Name
+                          </div>
+                          <div class="date">
+                            <i class="fa fa-calendar"></i> Oct 27, 2025
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="text-center">
+                  <a href="#" class="button">See all sermons</a>
+                </div>
+              </div> -->
+            </div>
+            <!-- .row -->
+          </div>
+          <!-- .container -->
+        </div>
+        <!-- section -->
+      </main>
+      <!-- .main-content -->
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <!-- Address / about -->
+            <div class="col-md-4">
+              <div class="widget">
+                <h3 class="widget-title">Our church</h3>
+                <p>
+                  Grace Romanian Baptist Church exists to glorify God by
+                  proclaiming the Gospel of Jesus Christ and making disciples.
+                </p>
+                <ul class="address">
+                  <li>
+                    <i class="fa fa-map-marker"></i>
+                    1542 Harrison St, Hollywood, FL 33020
+                  </li>
+                  <!-- <li>
+                    <i class="fa fa-phone"></i>
+                    TBD
+                  </li> -->
+                  <!-- <li>
+                    <i class="fa fa-envelope"></i>
+                    email TBD
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- Topics from last gathering -->
+            <!-- <div class="col-md-4">
+              <div class="widget">
+                <h3 class="widget-title">From recent services</h3>
+                <ul class="bullet">
+                  <li>
+                    <a href="#">Sermon: The Good Shepherd (John 10)</a>
+                  </li>
+                  <li>
+                    <a href="#">Bible Study: Living by Grace, Not Performance</a>
+                  </li>
+                  <li>
+                    <a href="#">Youth Night: Identity in Christ</a>
+                  </li>
+                  <li>
+                    <a href="#">Prayer Focus: Our Families & Community</a>
+                  </li>
+                  <li>
+                    <a href="#">Missions Update: Supporting Church Planting</a>
+                  </li>
+                  <li>
+                    <a href="#">Music Ministry: Worship That Flows from the Word</a>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+
+            <!-- Contact form -->
+            <!-- <div class="col-md-4">
+              <div class="widget">
+                <h3 class="widget-title">Contact us</h3>
+                <form action="#" class="contact-form">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" placeholder="Your name..." />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" placeholder="Email..." />
+                    </div>
+                  </div>
+
+                  <textarea
+                    name="message"
+                    placeholder="How can we pray for you or help you?"
+                  ></textarea>
+                  <div class="text-right">
+                    <input type="submit" value="Send message" />
+                  </div>
+                </form>
+              </div>
+            </div> -->
+          </div>
+          <!-- .row -->
+
+          <p class="colophon">
+            Copyright &copy; 2025 Grace Romanian Baptist Church (Harul). All rights
+            reserved.
+          </p>
+        </div>
+        <!-- .container -->
+      </footer>
+      <!-- .site-footer -->
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+		// 2025 Verses
+      // const verses = {
+    // 0: {
+    //     verseEN: "Mark 10:45 - For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many. (NKJV)",
+    //     verseRO: "Marcu 10:45 - Căci Fiul omului n-a venit să I se slujească ci El să slujească și să-Și dea viața răscumpărare pentru mulți. (Cornilescu)"
+    // },
+    // 1: {
+    //     verseEN: "Psalm 100:2 - Serve the Lord with gladness; Come before His presence with singing. (NKJV)",
+    //     verseRO: "Psalm 100:2 - Slujiți Domnului cu bucurie, veniți cu veselie înaintea Lui. (Cornilescu)"
+    // },
+    // 2: {
+    //     verseEN: "1 Corinthians 16:14 - Let all that you do be done with love. (NKJV)",
+    //     verseRO: "1 Corinteni 16:14 - Tot ce faceți, să fie făcut cu dragoste. (Cornilescu)"
+    // },
+    // 3: {
+    //     verseEN: "John 13:34 - A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. (NKJV)",
+    //     verseRO: "Ioan 13:34 - Vă dau o poruncă nouă: Să vă iubiți unii pe alții; cum v-am iubit Eu, așa să vă iubiți și voi unii pe alții. (Cornilescu)"
+    // },
+    // 4: {
+    //     verseEN: "Colossians 3:13 - Bearing with one another, and forgiving one another, if anyone has a complaint against another; even as Christ forgave you, so you also must do. (NKJV)",
+    //     verseRO: "Coloseni 3:13 - Îngăduiți-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul. Cum v-a iertat Hristos, așa iertați-vă și voi. (Cornilescu)"
+    // },
+    // 5: {
+    //     verseEN: "Romans 15:13 - Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope by the power of the Holy Spirit. (NKJV)",
+    //     verseRO: "Romani 15:13 - Dumnezeul nădejdii să vă umple de toată bucuria și pacea pe care o dă credința, pentru ca, prin puterea Duhului Sfânt, să fiți tari în nădejde. (Cornilescu)"
+    // },
+    // 6: {
+    //     verseEN: "2 Timothy 4:7 - I have fought the good fight, I have finished the race, I have kept the faith. (NKJV)",
+    //     verseRO: "2 Timotei 4:7 - M-am luptat lupta cea bună, mi-am isprăvit alergarea, am păzit credința. (Cornilescu)"
+    // },
+    // 7: {
+    //     verseEN: "Philippians 4:6 - Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God. (NKJV)",
+    //     verseRO: "Filipeni 4:6 - Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri. (Cornilescu)"
+    // },
+    // 8: {
+    //     verseEN: "Matthew 6:33 - But seek first the kingdom of God and His righteousness, and all these things shall be added to you. (NKJV)",
+    //     verseRO: "Matei 6:33 - Căutați mai întâi Împărăția lui Dumnezeu și neprihănirea Lui, și toate aceste lucruri vi se vor da pe deasupra. (Cornilescu)"
+    // },
+    // 9: {
+    //     verseEN: "1 Thessalonians 5:17 - Pray without ceasing. (NKJV)",
+    //     verseRO: "1 Tesaloniceni 5:17 - Rugați-vă neîncetat. (Cornilescu)"
+    // },
+    // 10: {
+    //     verseEN: "1 Thessalonians 5:18 - In everything give thanks; for this is the will of God in Christ Jesus for you. (NKJV)",
+    //     verseRO: "1 Tesaloniceni 5:18 - Mulțumiți lui Dumnezeu pentru toate lucrurile, căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi. (Cornilescu)"
+    // },
+    // 11: {
+    //     verseEN: "Luke 2:11 - For there is born to you this day in the city of David a Savior, who is Christ the Lord. (NKJV)",
+    //     verseRO: "Luca 2:11 - Astăzi, în cetatea lui David, vi s-a născut un Mântuitor, care este Hristos, Domnul. (Cornilescu)"
+    // }
+
+
+    const verses = {
+  0: {
+    verseEN: "Isaiah 41:10 - Fear not, for I am with you; Be not dismayed, for I am your God. I will strengthen you, Yes, I will help you, I will uphold you with My righteous right hand. (NKJV)",
+    verseRO: "Isaia 41:10 - Nu te teme, Eu sunt cu tine; nu te uita cu îngrijorare, Eu sunt Dumnezeul tău; Eu te întăresc, tot Eu îți vin în ajutor. Eu te sprijinesc cu dreapta Mea biruitoare. (Cornilescu)"
+  },
+  1: {
+    verseEN: "Jeremiah 31:3 - The Lord has appeared of old to me, saying: 'Yes, I have loved you with an everlasting love; Therefore with lovingkindness I have drawn you.' (NKJV)",
+    verseRO: "Ieremia 31:3 - Te iubesc cu o iubire veșnică; de aceea îți păstrez bunătatea Mea. (Cornilescu)"
+  },
+  2: {
+    verseEN: "Hebrews 13:5 - Let your conduct be without covetousness; be content with such things as you have. For He Himself has said, 'I will never leave you nor forsake you.' (NKJV)",
+    verseRO: "Evrei 13:5 - Să nu fiți iubitori de bani. Mulțumiți-vă cu ce aveți, căci El Însuși a zis: „Nicidecum n-am să te las, cu niciun chip nu te voi părăsi.” (Cornilescu)"
+  },
+  3: {
+    verseEN: "John 11:25 - Jesus said to her, 'I am the resurrection and the life. He who believes in Me, though he may die, he shall live.' (NKJV)",
+    verseRO: "Ioan 11:25 - Isus i-a zis: „Eu sunt învierea și viața. Cine crede în Mine, chiar dacă ar fi murit, va trăi.” (Cornilescu)"
+  },
+  4: {
+    verseEN: "1 Peter 1:5 - Who are kept by the power of God through faith for salvation ready to be revealed in the last time. (NKJV)",
+    verseRO: "1 Petru 1:5 - Voi sunteți păziți de puterea lui Dumnezeu prin credință pentru mântuirea gata să fie descoperită în vremurile de apoi. (Cornilescu)"
+  },
+  5: {
+    verseEN: "John 10:10 - I have come that they may have life, and that they may have it more abundantly. (NKJV)",
+    verseRO: "Ioan 10:10 - Eu am venit ca oile să aibă viață și s-o aibă din belșug. (Cornilescu)"
+  },
+  6: {
+    verseEN: "Philippians 4:7 - And the peace of God, which surpasses all understanding, will guard your hearts and minds through Christ Jesus. (NKJV)",
+    verseRO: "Filipeni 4:7 - Și pacea lui Dumnezeu, care întrece orice pricepere, vă va păzi inimile și gândurile în Hristos Isus. (Cornilescu)"
+  },
+  7: {
+    verseEN: "Isaiah 41:13 - For I, the Lord your God, will hold your right hand, Saying to you, 'Fear not, I will help you.' (NKJV)",
+    verseRO: "Isaia 41:13 - Eu sunt Domnul, Dumnezeul tău, care te iau de mâna dreaptă și-ți zic: Nu te teme de nimic, Eu îți vin în ajutor! (Cornilescu)"
+  },
+  8: {
+    verseEN: "Psalm 32:8 - I will instruct you and teach you in the way you should go; I will guide you with My eye. (NKJV)",
+    verseRO: "Psalmul 32:8 - „Eu, zice Domnul, te voi învăța și-ți voi arăta calea pe care trebuie s-o urmezi; te voi sfătui și voi avea privirea îndreptată asupra ta.” (Cornilescu)"
+  },
+  9: {
+    verseEN: "Revelation 22:12 - And behold, I am coming quickly, and My reward is with Me, to give to every one according to his work. (NKJV)",
+    verseRO: "Apocalipsa 22:12 - „Iată, Eu vin curând și răsplata Mea este cu Mine, ca să dau fiecăruia după fapta lui.” (Cornilescu)"
+  },
+  10: {
+    verseEN: "2 Corinthians 9:15 - Thanks be to God for His indescribable gift! (NKJV)",
+    verseRO: "2 Corinteni 9:15 - Mulțumiri fie aduse lui Dumnezeu pentru darul Lui nespus de mare! (Cornilescu)"
+  },
+  11: {
+    verseEN: "Matthew 1:21 - And she will bring forth a Son, and you shall call His name Jesus, for He will save His people from their sins. (NKJV)",
+    verseRO: "Matei 1:21 - Ea va naște un Fiu și-I vei pune numele Isus, pentru că El va mântui pe poporul Lui de păcatele sale. (Cornilescu)"
+  }
+
+};
+
+        const currentMonth = new Date().getMonth();
+        const verseElementEN = document.getElementById("monthly-verse-en");
+        const verseElementRO = document.getElementById("monthly-verse-ro");
+
+        verseElementEN.textContent = verses[currentMonth].verseEN;
+        verseElementRO.textContent = verses[currentMonth].verseRO;
+    });
+</script>

@@ -1,0 +1,379 @@
+<div class="home-container">
+  <!-- Navbar -->
+  <nav class="navbar" [class.scrolled]="isScrolled">
+    <div class="nav-container">
+      <div class="nav-logo" (click)="scrollToTop()">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Harul</span>
+      </div>
+      
+      <div class="nav-links" [class.mobile-open]="mobileMenuOpen">
+        <a class="nav-link" (click)="scrollToTop()">Home</a>
+        <a class="nav-link" (click)="scrollToSection('live-stream')">Watch Live</a>
+        <a class="nav-link" (click)="scrollToSection('about')">About</a>
+        <a class="nav-link" (click)="scrollToSection('connect')">Connect</a>
+        <button class="nav-btn" (click)="scrollToSection('live-stream')">Join Service</button>
+      </div>
+
+      <button class="mobile-toggle" (click)="toggleMobileMenu()" [class.open]="mobileMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section - Full Page -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">Welcome</div>
+      <h1 class="hero-title">Grace Romanian Baptist Church</h1>
+      <p class="hero-subtitle">Biserica noastra există pentru a-L glorifica pe Dumnezeu, contribuind la extinderea Împărăției
+Lui prin evanghelizarea păcătoșilor și echiparea credincioșilor!
+</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary pulse" (click)="scrollToSection('live-stream')">
+          <span class="btn-icon">▶</span>
+          Watch Now
+        </button>
+        <button class="btn btn-secondary" (click)="scrollToSection('about')">
+          Explore More
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">7PM</div>
+          <div class="stat-label">Friday Service</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number">10AM</div>
+          <div class="stat-label">Sunday Service</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number">6PM</div>
+          <div class="stat-label">Sunday Service</div>
+        </div>
+        <div class="stat-divider"></div>
+      </div>
+    </div>
+
+    <div class="scroll-prompt" (click)="scrollToSection('live-stream')">
+      <span>Scroll to explore</span>
+      <div class="scroll-icon"></div>
+    </div>
+  </section>
+
+  <!-- Live Stream Section -->
+  <section id="live-stream" class="stream-section" [class.visible]="isStreamVisible">
+    <div class="section-container">
+      <div class="section-header">
+        <!-- <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span>Live Now</span>
+        </div> -->
+        <h2 class="section-title">Join Us <span class="gradient-text">Online</span></h2>
+        <!-- <p class="section-description">
+          Experience worship from anywhere. Connect with our community in real-time.
+        </p> -->
+      </div>
+
+      <div class="stream-wrapper">
+        <div class="stream-container">
+          <iframe 
+            src="https://stream.streamingchurch.tv/stream.php?churchid=church9993" 
+            width="100%" 
+            height="100%"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- <div class="stream-features">
+        <div class="feature-card">
+          <div class="feature-icon">🎥</div>
+          <h3>HD Quality</h3>
+          <p>Crystal clear streaming</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Live Chat</h3>
+          <p>Connect with others</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Mobile Ready</h3>
+          <p>Watch anywhere</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⏰</div>
+          <h3>On Demand</h3>
+          <p>Catch up anytime</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <div class="about-content">
+        <div class="about-left">
+          <div class="about-image-grid">
+            <div class="grid-item item-1">
+              <div class="image-overlay">Community</div>
+            </div>
+            <div class="grid-item item-2">
+              <div class="image-overlay">Worship</div>
+            </div>
+            <div class="grid-item item-3">
+              <div class="image-overlay">Growth</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-right">
+          <div class="section-badge">Our Story</div>
+          <h2 class="section-title">A Community <span class="gradient-text">Built on Love</span></h2>
+          <p class="about-text">
+            We're more than a church—we're a family united by faith and driven by love. 
+            For over 20 years, we've been creating a space where everyone belongs, 
+            questions are welcomed, and growth is celebrated.
+          </p>
+          <p class="about-text">
+            Whether you're taking your first steps in faith or you've walked this path 
+            for years, you'll find authentic relationships and meaningful connections here.
+          </p>
+          
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">❤️</div>
+              <div class="value-content">
+                <h4>Unconditional Love</h4>
+                <p>Everyone is welcome, no exceptions</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🌱</div>
+              <div class="value-content">
+                <h4>Personal Growth</h4>
+                <p>Discover your purpose and potential</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div class="value-content">
+                <h4>Genuine Community</h4>
+                <p>Real relationships, lasting impact</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-outline" (click)="scrollToSection('connect')">
+            Learn More About Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries Section -->
+  <section class="ministries-section">
+    <div class="section-container">
+      <div class="section-header centered">
+        <div class="section-badge">Get Involved</div>
+        <h2 class="section-title">Find Your <span class="gradient-text">Place</span></h2>
+        <p class="section-description">
+          Discover opportunities to connect, serve, and grow alongside others
+        </p>
+      </div>
+
+      <div class="ministries-grid">
+        <div class="ministry-card card-youth">
+          <div class="ministry-icon">🎸</div>
+          <h3>Youth Ministry</h3>
+          <p>Ages 12-18 · Fridays 7PM</p>
+          <div class="card-hover-content">
+            <p>Dynamic worship, relevant teaching, and authentic friendships</p>
+            <button class="btn btn-small">Learn More</button>
+          </div>
+        </div>
+
+        <div class="ministry-card card-worship">
+          <div class="ministry-icon">🎵</div>
+          <h3>Worship Team</h3>
+          <p>All skill levels welcome</p>
+          <div class="card-hover-content">
+            <p>Use your musical gifts to lead others in worship</p>
+            <button class="btn btn-small">Join Team</button>
+          </div>
+        </div>
+
+        <div class="ministry-card card-kids">
+          <div class="ministry-icon">🎨</div>
+          <h3>Kids Ministry</h3>
+          <p>Birth - 5th Grade</p>
+          <div class="card-hover-content">
+            <p>Fun, age-appropriate teaching in a safe environment</p>
+            <button class="btn btn-small">Register Kids</button>
+          </div>
+        </div>
+
+        <div class="ministry-card card-groups">
+          <div class="ministry-icon">☕</div>
+          <h3>Small Groups</h3>
+          <p>Weekly gatherings</p>
+          <div class="card-hover-content">
+            <p>Deep connections and spiritual growth in intimate settings</p>
+            <button class="btn btn-small">Find a Group</button>
+          </div>
+        </div>
+
+        <div class="ministry-card card-serve">
+          <div class="ministry-icon">🙌</div>
+          <h3>Serve Team</h3>
+          <p>Make a difference</p>
+          <div class="card-hover-content">
+            <p>Use your time and talents to impact our community</p>
+            <button class="btn btn-small">Get Started</button>
+          </div>
+        </div>
+
+        <div class="ministry-card card-prayer">
+          <div class="ministry-icon">🙏</div>
+          <h3>Prayer Ministry</h3>
+          <p>Wednesdays 7PM</p>
+          <div class="card-hover-content">
+            <p>Join us in prayer for our church and community</p>
+            <button class="btn btn-small">Join Prayer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section id="connect" class="connect-section">
+    <div class="section-container">
+      <div class="connect-grid">
+        <div class="connect-card card-visit">
+          <div class="card-content">
+            <h3>Plan Your Visit</h3>
+            <p>We'd love to meet you! Here's what to expect when you visit us this Sunday.</p>
+            <ul class="info-list">
+              <li>Casual dress code</li>
+              <li>Free coffee & refreshments</li>
+              <li>Kids programs available</li>
+              <li>Plenty of parking</li>
+            </ul>
+            <button class="btn btn-white">Get Directions</button>
+          </div>
+        </div>
+
+        <div class="connect-card card-times">
+          <div class="card-content">
+            <h3>Service Times</h3>
+            <div class="time-block">
+              <div class="time-day">Sunday</div>
+              <div class="time-service">
+                <span>Morning Worship</span>
+                <span class="time">10:00 AM</span>
+              </div>
+            </div>
+            <div class="time-block">
+              <div class="time-day">Wednesday</div>
+              <div class="time-service">
+                <span>Prayer & Bible Study</span>
+                <span class="time">7:00 PM</span>
+              </div>
+            </div>
+            <button class="btn btn-white">Add to Calendar</button>
+          </div>
+        </div>
+
+        <div class="connect-card card-contact">
+          <div class="card-content">
+            <h3>Get in Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>123 Faith Avenue<br>Your City, ST 12345</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>info gracefellowship.org</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <span>(555) 123-4567</span>
+              </div>
+            </div>
+            <button class="btn btn-white">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">✦</span>
+            <span class="logo-text">Grace Fellowship</span>
+          </div>
+          <p class="footer-tagline">Grace Romanian Baptist Church</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">YouTube</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Visit</h4>
+            <a href="#">Directions</a>
+            <a href="#">What to Expect</a>
+            <a href="#">FAQs</a>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="#">Small Groups</a>
+            <a href="#">Ministries</a>
+            <a href="#">Events</a>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="#">Sermons</a>
+            <a href="#">Blog</a>
+            <a href="#">Give</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Grace Fellowship Church. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
